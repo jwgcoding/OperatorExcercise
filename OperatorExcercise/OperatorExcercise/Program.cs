@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.ComponentModel;
+using System.Reflection;
+using Operators_Excercises;
 
 namespace OperatorExcercise
 {
@@ -15,17 +17,9 @@ namespace OperatorExcercise
             var remainder = a % b;
             Console.WriteLine($"{a} /{b} is {quotient} remainder {remainder}");
             //Excercise 2 
-            Console.WriteLine("What is the area of your circle?");
-   
-            var radius = double.Parse(Console.ReadLine());
-            Console.WriteLine(AreaOfCircle(radius));
+            
+            Methods.AreaOfCircle();
         }
-        public static double AreaOfCircle(double radius)
-        {
-          
-            var area = Math.PI * Math.Pow(radius,2);
-            return area;
-           
-        }
+    
     }
 }
